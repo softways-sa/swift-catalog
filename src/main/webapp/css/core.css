@@ -1,0 +1,137 @@
+html, body {
+  font-family: 'Roboto Condensed',Arial,sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555555;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Roboto Condensed',Arial,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+    border:1px solid #ccc;
+    padding:20px;
+    margin-bottom:20px;
+}
+legend {
+    border:1px solid #ccc;
+    background:#ffffff;
+    padding:0 20px;
+    font-weight:bold;
+}
+label {font-weight: 100;}
+    
+ol, ul {
+    list-style: none outside none;
+}
+
+#content ul, #content ol, #productCatalogListing .item-options ul, #productCatalogListing .item-options ol,  #productSearchCatDescr ul, #productSearchCatDescr ol {
+    list-style-image: url("/images/li.png");
+    list-style-position: inside;
+    margin: 0;
+    padding: 0 0 10px 10px;
+}
+#contentContainer li, #productCatalogListing .item-options li {
+    padding-top: 10px;
+}
+
+/**img { border:0; display: block; }
+img {display: block;}**/
+
+p { margin:0; padding-top:5px; padding-bottom:5px;}
+
+input, select {font-size:12px; font-family:arial,tahoma,helvetica;}
+
+a { color:#4F99C8; text-decoration:none; }
+a:hover, a:active { color:#4F99C8; text-decoration:underline; }
+
+a:focus, a:hover, a:active { outline:none }
+
+h1 {
+  font-size: 36px;
+  font-weight: 300;
+  color: #4e4e4e;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #4e4e4e;
+}
+h3, h4 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #000000;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
+h6 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #0960C9;
+}
+
+#topPath h6 {
+  padding:0;
+  margin:0;
+  font-size:24px;
+  font-weight:bold;
+  color:ffffff;
+}
+
+/* start: pagination */
+#searchPagination {width:100%; margin:0 auto; text-align:center;}
+
+#pagination a {padding:6px 12px; color:#565656; background:#fff; text-decoration:none; border:1px solid #cdddee;}
+
+table.centerPagination {text-align:center; width:100%; margin:0px; padding:0px;}
+
+table.pagination {padding:0px; margin:0px;}
+
+table.pagination a {padding:6px 12px; display:block; font-size:11px; font-weight:bold; color:#565656; text-decoration:none; border:1px solid #cdddee;}
+
+table.pagination a:hover {color:#fff; background-color:#565656; border:1px solid #565656;}
+table.pagination a.searchCurrentPage, table.pagination a.searchCurrentPage:hover {padding:6px 12px; display:block; color:#a8a8a8; background:#fff; text-decoration:none; border:1px solid white; white-space:nowrap; cursor:default;}
+
+table.pagination a.searchPreviousPage,
+table.pagination a.searchPreviousPage:hover,
+table.pagination a.searchNextPage,
+table.pagination a.searchNextPage:hover
+{ padding:6px 12px; display:table-cell; color:#a8a8a8; text-decoration:none; border:1px solid #dcdcdc; white-space:nowrap; cursor:default; }
+
+.paginationArrows { line-height:10px; }
+/* end: pagination */
+
+a.getpdf {
+    background-image: url("/images/pdf_icon.gif");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 4px 0 4px 20px;
+    text-decoration: none;
+}
+a.getpdf:hover {
+    background-image: url("/images/getpdf_icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 4px 0 4px 20px;
+    text-decoration: underline;
+}
+
+table.template1 {border-collapse:collapse; border: 1px solid #000000;}
+table.template1 td, table.template1 th {border: 1px dotted black; text-align:center; padding:10px 5px;}
+table.template1 td p, table.template1 th p{padding:0; margin:0;}
+table.template1 th {background-color:#cccccc;}
+table.template1 tr:hover td {background-color:#555555; color:#ffffff;}
+
+table.template2 {border-collapse:collapse; border: 1px solid #5C5C5C;}
+table.template2 td, table.template2 th {border: 1px dotted #5C5C5C; text-align:center; padding:8px 5px;}
+table.template2 td p, table.template2 th p{padding:0; margin:0;}
+table.template2 th {background-color:#C0C0C0;}
+table.template2 tr:hover td {background-color:#555555; color:#ffffff;}
+
+.left {float: left;}
+.right {float: right;}

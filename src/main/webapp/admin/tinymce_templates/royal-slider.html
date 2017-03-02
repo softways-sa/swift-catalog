@@ -1,0 +1,101 @@
+<div id="homeSliderContainer" class="hidden-xs clearfix">
+<div id="home-slider" class="royalSlider rsMinW">
+<div class="rsContent"><img class="rsImg" src="/images/slide1.jpg" alt="" />
+<div class="infoBlock infoBlockLeftBlack2 rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+<h4>This is an animated block, add any number of them to any type of slide</h4>
+<p>Put completely anything inside - text, images, inputs, links, buttons.</p>
+</div>
+</div>
+<div class="rsContent"><img class="rsImg" src="/images/slide2.jpg" alt="" />
+<div class="infoBlock infoBlockLeftBlack2 rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+<h4>Responsive e-shop</h4>
+<p>Put completely anything inside - text, images, inputs, links, buttons.</p>
+</div>
+</div>
+<div class="rsContent"><img class="rsImg" src="/images/slide3.jpg" alt="" /></div>
+<div class="rsContent"><img class="rsImg" src="/images/slide4.jpg" alt="" /></div>
+</div>
+</div>
+
+<link rel="stylesheet" href="/css/royalslider/skins/minimal-white/rs-minimal-white.css">
+<style>
+#home-slider {
+  width: 100%;
+  color: #000;
+}
+#home-slider * {
+  -webkit-backface-visibility: inherit;
+}
+#home-slider *, #home-slider *:before, #home-slider *:after {
+ box-sizing: content-box !important;
+}
+
+.coloredBlock {
+  padding: 12px;
+  background: rgba(255,0,0,0.6);
+  color: #FFF;
+   width: 200px;
+   left: 20%;
+   top: 5%;
+}
+.infoBlock {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: auto;
+  max-width: 25%;
+  padding-bottom: 0;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  padding: 20px;
+}
+.infoBlockLeftBlack {
+  color: #FFF;
+  background: #000;
+  background: rgba(0,0,0,0.75);
+  left: 30px;
+  right: auto;
+}
+.infoBlockLeftBlack2 {
+  color: #FFF;
+  background-color: transparent;
+  text-shadow: 1px 1px #7e858d;
+  left: 30px;
+  right: auto;
+}
+.infoBlockLeftBlack2 h4 {
+color: #FFF;
+  font-size: 30px;
+}
+.infoBlock h4 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 3px;
+}
+.infoBlock p {
+  font-size: 18px;
+  margin: 4px 0 0;
+}
+.infoBlock a {
+  color: #FFF;
+  text-decoration: underline;
+}
+</style>
+
+<script>
+jQuery(document).ready(function($) {
+  $("#home-slider").royalSlider({
+   autoPlay: {
+    		// autoplay options go gere
+    		enabled: true,
+    		pauseOnHover: true
+    	},
+    keyboardNavEnabled: true,
+    imageScaleMode: 'fill',
+    arrowsNavAutoHide: true,
+    transitionType: 'fade'
+  });  
+});
+</script>

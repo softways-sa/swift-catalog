@@ -1,0 +1,445 @@
+<style>
+.clear:before, .clear:after {
+    content: "";
+    display: table;
+}
+.clear:after {
+    clear: both
+}
+.clear {
+    zoom: 1
+}
+
+.no-visible {
+	display: none;
+}
+
+.tab-logo{
+   padding:0px;
+   display:block;
+   padding-left:40px;
+   background-position:5px center !important;
+	 background-repeat: no-repeat;
+}
+
+#simple {
+ margin: 30px 0 80px;
+}
+
+#simple .horizontal-tabs ul.unstyled, #simple .horizontal-tabs  ol.unstyled {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+#simple .horizontal-tabs ul li, #simple .horizontal-tabs  ol li {padding-top: 0;}
+
+.horizontal-tabs a:hover, .horizontal-tabs a:active {text-decoration: none;}
+
+#home-products-intro li span{
+  background:none;
+  display:inline-block;
+  width:24px;
+  height:10px;
+  text-indent: -9999px;
+  position: absolute;
+  bottom:-1px;
+  left:50%;
+  margin-left:-12px;
+}
+#home-products-intro li.selected span{
+  background:url(/images/gray-pointer.png) no-repeat center bottom;
+}
+#home-products-intro li.selected h2, #home-products-intro li a:hover h2{
+  color:#333;
+}
+  #home-products-intro li.selected p, #home-products-intro li a:hover p{
+  color:#888;
+}
+
+.horizontal-tabs .htabs h2 {
+  font-family: 'Flama-Medium';
+  font-size: 26px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.horizontal-tabs .htabs p {
+  font-size: 17px;
+  font-style: italic;
+  font-family: 'Flama-Light';
+  color:#AAA;
+  line-height:1.2;
+}
+.horizontal-tabs .htabs li {
+  width: 30%;
+  margin-left: 5%;
+  float: left;
+  text-align: center;
+
+  position: relative;
+}
+  .horizontal-tabs .htabs li a{
+    padding:90px 0 5px 0;
+    background:url(/images/icon-utm-large.png) no-repeat center top;
+    display:block;
+  }
+.horizontal-tabs .htabs #eup a{
+  background:url(/images/icon-eup-large.png) no-repeat center top;
+}
+.horizontal-tabs .htabs #sp a{
+  background:url(/images/icon-serverprotection-large.png) no-repeat center top;
+}
+.horizontal-tabs li:first-child {
+  margin-left: 0;
+}
+.horizontal-tabs .panels {
+  background: #F1F1F1;
+  border: 1px solid #ddd;
+  padding:30px 0px 30px 30px;
+  border-radius:6px;
+}
+.horizontal-tabs .mpanel .column {
+  width: 31%;
+  margin-left: 2%;
+  float: left;
+}
+.horizontal-tabs .mpanel .column:first-child {
+  margin-left: 0;
+}
+.horizontal-tabs h2{
+  margin-top:0;
+  font-size:20px;
+}
+.horizontal-tabs h3 {
+  font-size: 18px;
+  color:#444;
+  margin: 0 0 5px 0;
+  padding:0;
+}
+.horizontal-tabs em {
+  font-size:13px;
+  font-family: 'Flama-Light';
+  color:#888;
+  font-style:italic;
+  padding:0 0 3px 0px;
+  }
+.horizontal-tabs .lead {
+  font-size: 18px;
+  color:#777;
+}
+.horizontal-tabs .mpanel li {
+  margin-bottom: 5px;
+  /*padding-left: 10px;*/
+}
+  .horizontal-tabs .mpanel li:last-child {
+    margin-bottom:0;
+  }
+  .horizontal-tabs .panels li a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #F1F1F1;
+  }
+    .horizontal-tabs .panels li a:hover {
+      background-color: #F9F9F9;
+      border-color: #DDD;
+      border-radius:5px;
+    }
+    .horizontal-tabs .mpanel .column:last-child li a:hover {
+      /*border-right-color: #F9F9F9;*/
+    }
+.horizontal-tabs .mpanel li a {
+  color: #333;
+  font-size: 18px;
+}
+.horizontal-tabs .mpanel .tagline {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  font-family: 'Flama-Light';
+  margin-top: 6px;
+}
+.horizontal-tabs .mpanel .button + .button {
+  margin-left: 12px;
+}
+</style>
+
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".dynamic li a").mouseenter(function() {
+    $(this).parent().siblings("li").removeClass("selected");
+    $(this).parent().addClass("selected");
+    $("#panel-" + $(this).parent().attr("id") + "").siblings().hide();
+    $("#panel-" + $(this).parent().attr("id") + "").show();
+  });
+});
+</script>
+
+
+
+ <div id="simple">
+    <div class="container">
+      
+      <div class="horizontal-tabs">
+
+            
+                    <ul class="htabs unstyled clear dynamic" id="home-products-intro">
+                        
+                    <li id="networkprotection" class="selected">
+                        <a href="#show-networkprotection" style='background-image: url(/images/icon-utm-large.png)'>
+                            <h2>Network Protection</h2>
+                            
+                            <span>^</span>
+                        </a>
+                    </li>
+                 
+                    <li id="enduserprotection">
+                        <a href="#show-enduserprotection" style='background-image: url(/images/icon-eup-large.png)'>
+                            <h2>Enduser Protection</h2>
+                            
+                            <span>^</span>
+                        </a>
+                    </li>
+                
+                    <li id="serverprotection">
+                        <a href="#show-serverprotection" style='background-image: url(/images/icon-serverprotection-large.png)'>
+                            <h2>Server Protection</h2>
+                            
+                            <span>^</span>
+                        </a>
+                    </li>
+                
+                    </ul>
+                
+
+            
+                    <div class="panels clear">
+                        
+                    <div class="mpanel" id="panel-networkprotection">
+                        <div class="column">
+                          <h2>Secure Your Network</h2>
+              <p class="lead">Secure your Network with complete antivirus, next-gen firewall, Wi-Fi, and web server protection with one appliance that’s insanely powerful and ridiculously simple.</p>
+
+<br /><br />            
+</div>
+                        <div class="column">
+                            
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/unified-threat-management.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/images/icon-utm-small.png)'>
+                                          <h3>Unified Threat Management</h3><em>The ultimate network security package.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/secure-vpn.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-securevpn-small.png?la=en)'>
+                                          <h3>Secure VPN</h3><em>Turn any location into a secure location.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/secure-web-gateway.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-secureweb-small.png?la=en)'>
+                                          <h3>Secure Web Gateway</h3><em>Complete web protection everywhere.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/web-application-firewall.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-waf-small.png?la=en)'>
+                                          <h3>Web Application Firewall</h3><em>Uncommon protection from common threats.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+                        </div>
+                        <div class="column">
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/next-gen-firewall.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-ngfw-small.png?la=en)'>
+                                          <h3>Next-Generation Firewall</h3><em>This is where network threats go to die.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/secure-wifi.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-securewifi-small.png?la=en)'>
+                                          <h3>Secure Wi-Fi</h3><em>Super secure, super Wi-Fi.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/secure-email-gateway.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-secureemail-small.png?la=en)'>
+                                          <h3>Secure Email Gateway</h3><em>Simple protection for a complex problem.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+
+                        </div>
+                    </div>
+                 
+                    <div class="mpanel no-visible" id="panel-enduserprotection">
+                        <div class="column">
+                                        <h2>Protect Your Users</h2>
+              <p class="lead">Shield your users with antivirus protection, data encryption, 			and mobile control. Wherever they are, whatever they’re using, 			they’re protected. </p>
+<br /><br />
+
+                        </div>
+                        <div class="column">
+                            
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/enduser-protection-suites.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-eup-small.png?la=en)'>
+                                          <h3>Enduser Protection Bundles</h3><em>Comprehensive security for users and data.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/cloud.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Navigation/Cloud-02.png?la=en)'>
+                                          <h3>Sophos Cloud</h3><em>Sophos Security. Cloud Simplicity.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/safeguard-encryption.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-encryption-small.png?la=en)'>
+                                          <h3>SafeGuard Encryption</h3><em>Encryption without compromise.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+                        </div>
+                        <div class="column">
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/endpoint-antivirus.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/Endpoint_AV_thumbnail_04.png?la=en)'>
+                                          <h3>Endpoint Antivirus</h3><em>Essential protection for laptops & desktops.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/mobile-control.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-mobilecontrol-small.png?la=en)'>
+                                          <h3>Mobile Control</h3><em>Countless devices, one solution.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+
+                        </div>
+                    </div>
+                
+                    <div class="mpanel no-visible" id="panel-serverprotection">
+                        <div class="column">
+                          <h2>Keep Data Safe</h2>
+<p class="lead">We&rsquo;ve optimized our legendary antivirus technology for heavy-duty use in demanding server environments, leaving threats out in the cold. </p>
+<br />
+<br />
+                        </div>
+                        <div class="column">
+                            
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/virtualization-security.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/vShield-icon-small.png?la=en)'>
+                                          <h3>Virtualization Security</h3><em>Performs like it isn’t there. Protects because it is.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/sharepoint-security.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/SophosNext/Images/Products/Sharepoint/Sharepoint-Icon-sm.png?la=en)'>
+                                          <h3>SharePoint Security</h3><em>Collaborate in confidence.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/puremessage.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-puremessage-small.png?la=en)'>
+                                          <h3>PureMessage</h3><em>Good news for you. Bad news for spam.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+                        </div>
+                        <div class="column">
+                            
+                                    <ul class="unstyled">
+                                        
+                                    <li>
+                                      <a href='/en-us/products/server-security.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-serverantivirus-small.png?la=en)'>
+                                          <h3>Server Security</h3><em>Pro-server. Anti-virus.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    <li>
+                                      <a href='/en-us/products/network-storage-antivirus.aspx'>
+                                        <span class="tab-logo tab-eup" style='background-image: url(/en-us/medialibrary/Images/Products/Icons/icon-networkstorage-small.png?la=en)'>
+                                          <h3>Network Storage Antivirus</h3><em>High-tech security for high-tech storage.</em>
+                                        </span>
+                                      </a>
+                                    </li>
+                                
+                                    </ul>
+                                
+
+                        </div>
+                    </div>
+                
+                    </div>
+                
+
+
+
+      </div>
+    </div>
+  </div>
