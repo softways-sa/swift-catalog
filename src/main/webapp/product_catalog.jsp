@@ -98,7 +98,7 @@ request.setAttribute("catId",catId);
 <%@ include file="/include/product_catalog_left.jsp" %>
 
 <div id="productCatalogListing" class="responsive4Col">
-<%if (product_catalogue.getColumn("catDescr" + lang).length()>0) {%><div id="productSearchCatDescr"><%=product_catalogue.getColumn("catDescr" + lang)%></div><%}%>
+<%if (catId.length() > 0 && product_catalogue.getColumn("catDescr" + lang).length() > 0) {%><div id="productSearchCatDescr"><%=product_catalogue.getColumn("catDescr" + lang)%></div><%}%>
 <%
 product_catalogue.getSubCateg(catId, (catId.length() + 2) / 2,"catRank DESC,catId");
 

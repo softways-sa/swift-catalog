@@ -189,7 +189,7 @@ request.setAttribute("catId",catId);
 
 <div id="productCatalogListing" class="responsive4Col">
 
-<%if (product_catalogue.getColumn("catDescr" + lang).length()>0) {%><div id="productSearchCatDescr"><%=product_catalogue.getColumn("catDescr" + lang)%></div><%}%>
+<%if (catId.length() > 0 && product_catalogue.getColumn("catDescr" + lang).length() > 0) {%><div id="productSearchCatDescr"><%=product_catalogue.getColumn("catDescr" + lang)%></div><%}%>
   
 <%
 if (product_search.getQID().length()>0) { %>
