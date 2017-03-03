@@ -158,8 +158,6 @@ TABLE OF CONTENTS
 	-webkit-border-radius: 0 0 3px 3px;
 	-moz-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
-	/* IE7 Fix */
-	*width:expression(this.parentNode.currentStyle['width']);
 }
 .megamenu {
 	list-style:none;
@@ -2065,7 +2063,7 @@ TABLE OF CONTENTS
 .megamenu .myprdmenu ul.level-3 {margin:0 0 0 0; padding:0;}
 .megamenu .myprdmenu ul li {line-height: 18px !important;}
 .megamenu .myprdmenu ul li > a {
-  color: ##565656 !important;
+  color: #565656 !important;
   display: block;
 }
 .megamenu .myprdmenu ul li > a:hover {
