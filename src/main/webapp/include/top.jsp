@@ -55,43 +55,47 @@ if (whereAmI.equals("/index.jsp") && top_CMCCode.equals("")) top_CMCCode = HOME_
 <div id="header">
 <div id="sticky">
 
-<div id="headerContainer" class="container">
+  <%@ include file="/include/mobile_menu.jsp" %>
 
-<div class="row">
-<div class="col-xs-12 col-sm-5 col-md-3">
-  <a id="top_logo" href="<%="http://" + serverName + "/" + (defLang.equals(lang) ? "" : "?extLang=") + lang%>"><img id="top_logo_img" src="/images/logo<%=lang%>.png" alt="logo"/></a>
-</div>
+  <div id="headerContainer" class="container">
 
-<div style="margin-top:10px;" class="col-xs-12 col-sm-7 col-md-9">
+  <div class="row">
+  <div class="col-xs-12 col-sm-5 col-md-3">
+    <a id="top_logo" href="<%="http://" + serverName + "/" + (defLang.equals(lang) ? "" : "?extLang=") + lang%>"><img id="top_logo_img" src="/images/logo<%=lang%>.png" alt="logo"/></a>
+  </div>
 
-<div id="search-lang-top" class="clearfix">
-  <div><form id="langForm" method="post" action="#"><input type="hidden" name="lang" value="" /></form></div>
-  <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang="%>">ΕΛΛΗΝΙΚΑ</a></noscript></div>
-  <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang=LG"%>">ENGLISH</a></noscript></div>
+  <div style="margin-top:10px;" class="col-xs-12 col-sm-7 col-md-9">
 
-  <div id="header-flags" class="clearfix">
-  <div class="pull-right">
-  <div class="pull-left" style="margin-right:10px;"><% if (!lang.equals("")) { %><a href="javascript:document.getElementById('langForm').lang.value='';document.getElementById('langForm').submit();void(0);"><% } %><img src="/images/flag.png" alt="ΕΛΛΗΝΙΚΑ" title="ΕΛΛΗΝΙΚΑ" /><% if (!lang.equals("")) { %></a><% } %></div>
-  <div class="pull-left" style=""><% if (!lang.equals("LG")) { %><a href="javascript:document.getElementById('langForm').lang.value='LG';document.getElementById('langForm').submit();void(0);"><% } %><img src="/images/flagLG.png" alt="ENGLISH" title="ENGLISH" /><% if (!lang.equals("LG")) { %></a><% } %></div>
+  <div id="search-lang-top" class="clearfix">
+    <div><form id="langForm" method="post" action="#"><input type="hidden" name="lang" value="" /></form></div>
+    <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang="%>">ΕΛΛΗΝΙΚΑ</a></noscript></div>
+    <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang=LG"%>">ENGLISH</a></noscript></div>
+
+    <div id="header-flags" class="clearfix">
+    <div class="pull-right">
+    <div class="pull-left" style="margin-right:10px;"><% if (!lang.equals("")) { %><a href="javascript:document.getElementById('langForm').lang.value='';document.getElementById('langForm').submit();void(0);"><% } %><img src="/images/flag.png" alt="ΕΛΛΗΝΙΚΑ" title="ΕΛΛΗΝΙΚΑ" /><% if (!lang.equals("")) { %></a><% } %></div>
+    <div class="pull-left" style=""><% if (!lang.equals("LG")) { %><a href="javascript:document.getElementById('langForm').lang.value='LG';document.getElementById('langForm').submit();void(0);"><% } %><img src="/images/flagLG.png" alt="ENGLISH" title="ENGLISH" /><% if (!lang.equals("LG")) { %></a><% } %></div>
+    </div>
+    </div>
+
+    <div id="product-search-top-wrapper" class="clearfix">
+    <div id="product-search-top" class="pull-right">
+    <form id="searchForm" name="searchForm" action="/site/search" method="get">
+      <input id="qid" name="qid" class="form-control typeahead" type="text" placeholder="<%=top_jsp_lb.get("productSearch" + lang)%>" onclick="this.value=''" title="<%=top_jsp_lb.get("productSearch" + lang)%>">
+      <button class="submit"><span class="glyphicon glyphicon-search"></span></button>
+    </form>
+    </div>
+    </div>
+  </div>
+
+  <div id="megamenu_wrapper"><%@ include file="/include/top_menu.jsp" %></div> <!-- /megamenu_wrapper -->
+
+  <div class="mobileMenuBtnWrap"><a href="#" id="mobile-menu-link"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+
   </div>
   </div>
-  
-  <div id="product-search-top-wrapper" class="clearfix">
-  <div id="product-search-top" class="pull-right">
-  <form id="searchForm" name="searchForm" action="/site/search" method="get">
-    <input id="qid" name="qid" class="form-control typeahead" type="text" placeholder="<%=top_jsp_lb.get("productSearch" + lang)%>" onclick="this.value=''" title="<%=top_jsp_lb.get("productSearch" + lang)%>">
-    <button class="submit"><span class="glyphicon glyphicon-search"></span></button>
-  </form>
-  </div>
-  </div>
-</div>
 
-<div id="megamenu_wrapper"><%@ include file="/include/top_menu.jsp" %></div> <!-- /megamenu_wrapper -->
-
-</div>
-</div>
-
-</div> <!-- end: headerContainer -->
+  </div> <!-- /headerContainer -->
 
 </div> <!-- /sticky -->
 </div> <!-- /header -->

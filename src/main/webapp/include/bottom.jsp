@@ -173,6 +173,8 @@ static {
 <script type="text/javascript" src="/js/jsfunctions.js"></script>
 <script src="/js/megamenu_plugins.js"></script>
 <script src="/js/megamenu.js"></script>
+<script src="/js/mmenu/jquery.mmenu.min.js"></script>
+<script src="/js/mmenu/jquery.mmenu.fixedelements.min.js"></script>
 
 <script type="text/javascript">
 var productSearch = new Bloodhound({
@@ -212,6 +214,11 @@ $(document).ready(function(){
       menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
       menu_responsive: 1 // 1 = Responsive, 0 = Not responsive
   });
+  
+  $("#mobile-menu").removeClass('hidden');
+  $("#mobile-menu").mmenu();
+  var mmenuAPI = $("#mobile-menu").data("mmenu");
+  $("#mobile-menu-link").on("click", function(event){event.preventDefault(); mmenuAPI.open()});
   
   $('#product-search-top .typeahead').typeahead({
       minLength: 3

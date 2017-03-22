@@ -8,6 +8,8 @@ html, body {
 
 #headerContainer {background:url('/images/header_bg.png') no-repeat;}
 
+.megamenu_container {display: none;}
+
 #headerLogoLanguagesContainer {}
 #headerLogoContainer {float:left; margin:0 0 0 0;}
 #headerLanguagesContainer {float:right; margin:20px 0 0 20px;}
@@ -838,7 +840,37 @@ rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrame
   display: block;
 }
 
-/* Media Queries */
+/** ===================================
+
+  Mobile header
+
+======================================== **/
+.mobileMenuBtnWrap {
+  float: left;
+  width: 20%;
+}
+#mobile-menu-link {
+  height: 30px;
+  float: left;
+  margin: 17px 0 0 15px;
+  padding-top: 7px;
+}
+#mobile-menu-link .icon-bar {
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  background-color: #000000;
+}
+#mobile-menu-link .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+/** ===================================
+
+  Media Queries
+
+======================================== **/
 @media (min-width: 350px) {
   .item-images {
     float: left;
@@ -925,4 +957,10 @@ rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrame
     width: 920px;
   }
   .item-options {width: 580px;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .mobileMenuBtnWrap {display: none;}
+  .megamenu_container {display: block;}
 }
