@@ -90,16 +90,15 @@ if (whereAmI.equals("/index.jsp") && top_CMCCode.equals("")) top_CMCCode = HOME_
 
   <div id="megamenu_wrapper"><%@ include file="/include/top_menu.jsp" %></div> <!-- /megamenu_wrapper -->
 
-  <div class="mobileMenuBtnWrap"><a href="#" id="mobile-menu-link"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
-
   </div>
   </div>
+  
+  <div class="row"><div class="col-xs-12"><div class="mobileMenuBtnWrap"><a href="#" id="mobile-menu-link"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div></div></div>
 
   </div> <!-- /headerContainer -->
 
 </div> <!-- /sticky -->
 </div> <!-- /header -->
-
 
 <%
 String top_banner_imgname = "top_full_banner", top_banner_imgext = ".jpg", 
