@@ -61,7 +61,7 @@ if (whereAmI.equals("/index.jsp") && top_CMCCode.equals("")) top_CMCCode = HOME_
 
   <div class="row">
   <div class="col-xs-12 col-sm-5 col-md-3">
-    <a id="top_logo" href="<%="http://" + serverName + "/" + (defLang.equals(lang) ? "" : "?extLang=") + lang%>"><img id="top_logo_img" src="/images/logo<%=lang%>.png" alt="logo"/></a>
+    <a id="top_logo" href="<%="/" + (defLang.equals(lang) ? "" : "?extLang=" + lang)%>"><img id="top_logo_img" src="/images/logo<%=lang%>.png" alt="logo"/></a>
   </div>
 
   <div style="margin-top:10px;" class="col-xs-12 col-sm-7 col-md-9">

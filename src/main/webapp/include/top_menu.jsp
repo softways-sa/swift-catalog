@@ -6,7 +6,7 @@
 		 
 			<li class="megamenu_button"><a href="#_">&nbsp;</a></li>
 			
-      <li style=""><a href="<%="http://" + serverName + "/" + (defLang.equals(lang) ? "" : "?extLang=") + lang%>"><span style="display: block;" class="glyphicon glyphicon-home"></span></a></li>
+      <li style=""><a href="<%="/" + (defLang.equals(lang) ? "" : "?extLang=" + lang)%>"><span style="display: block;" class="glyphicon glyphicon-home"></span></a></li>
       
 			<%
 			if (USE_MEGAMENU) { %>

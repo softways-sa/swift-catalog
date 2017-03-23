@@ -2,7 +2,7 @@
 
 <nav id="mobile-menu" class="hidden">
   <ul>
-    <li><a href="<%="http://" + serverName + "/"%>">Home</a></li>
+    <li><a href="<%="/" + (defLang.equals(lang) ? "" : "?extLang=" + lang)%>">Home</a></li>
     
     <%
     menuLevel = 1;
