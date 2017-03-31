@@ -15,7 +15,7 @@
 <jsp:useBean id="helperBean" scope="page" class="gr.softways.dev.util.JSPBean" />
 
 <%
-if (!"1".equals(website_config_catalog)) {response.sendRedirect("http://" + serverName + "/admin/" + response.encodeURL("noaccess.jsp")); return;}
+if (!"1".equals(website_config_catalog)) {response.sendRedirect("/admin/noaccess.jsp"); return;}
 
 request.setAttribute("admin.topmenu","products");
 

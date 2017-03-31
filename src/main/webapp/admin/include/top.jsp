@@ -12,7 +12,7 @@
             <td width="15%" align="left" valign="top">
                 <table width="0" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                    <td class="text" id="white"  valign="top"><a href="<%= "http://" + serverName + "/admin/" + response.encodeURL("index.jsp") %>" class="text" id="white"><img src="images/logo.png" border="0" alt="" title="" hspace="10" /></a></td>                
+                    <td class="text" id="white"  valign="top"><a href="<%= "/admin/" + response.encodeURL("index.jsp") %>" class="text" id="white"><img src="images/logo.png" border="0" alt="" title="" hspace="10" /></a></td>                
                 </tr>
                 </table>
             </td>
@@ -22,7 +22,7 @@
                     <td class="text" id="white"><img src="images/user.png" border="0" alt="" title="" hspace="10" /></td>		
                     <td class="text" id="white"><%=authUsername%></td>		
                     <td class="text" id="white"></td>
-                    <td class="text"><a href="<%= "/servlet/admin/Logout?urlSuccess=http%3A%2F%2F" + serverName + "%2Fadmin%2F" %>"><img src="images/exit.png" border="0" alt="Έξοδος" title="Έξοδος" hspace="20" /></a></td>
+                    <td class="text"><a href="<%= "/servlet/admin/Logout?urlSuccess=%2Fadmin%2F" %>"><img src="images/exit.png" border="0" alt="Έξοδος" title="Έξοδος" hspace="20" /></a></td>
                 </tr>
                 </table>
             </td>
@@ -75,7 +75,7 @@
             <ul class="submenu">
               <li><a href="/admin/adminusers.jsp">Χρήστες συστήματος</a></li>
               <li><a href="/admin/configuration_search.jsp?action1=SEARCH">Παράμετροι</a></li>
-              <li><a href="<%="/servlet/admin/Logout?urlSuccess=http%3A%2F%2F" + serverName + "%2Fadmin%2F"%>">Έξοδος</a></li>
+              <li><a href="<%="/servlet/admin/Logout?urlSuccess=%2Fadmin%2F"%>">Έξοδος</a></li>
             </ul>
           </li>
             

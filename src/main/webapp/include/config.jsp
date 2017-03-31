@@ -27,7 +27,7 @@ final String HOME_CMCCode = "0101", BOTTOM_CMCCode = "0103",
     LEFT_SIDEBAR_CMCCode = "0102", RIGHT_SIDEBAR_CMCCode = "0104",
     EPAY_INTRO_TEXT_CMCCode = "0120";
     
-String MEGAMENU_PRDPROMO_URL = null, HTTP_PROTOCOL = "";
+String MEGAMENU_PRDPROMO_URL = null, URI_SCHEME = "";
 
 boolean USE_MEGAMENU = true, ITEMS_CAROUSEL = false;
 
@@ -38,8 +38,12 @@ if (__configurationValues[0] != null && "1".equals(__configurationValues[0])) US
 MEGAMENU_PRDPROMO_URL = __configurationValues[1];
 ITEMS_CAROUSEL = __configurationValues[4] == null ? false : "1".equals(__configurationValues[4]) ? true : false;
 
-if (__configurationValues[3] != null && "1".equals(__configurationValues[3])) HTTP_PROTOCOL = "https://";
-else HTTP_PROTOCOL = "http://";
+if (__configurationValues[3] != null && "1".equals(__configurationValues[3])) {
+  URI_SCHEME = "https://";
+}
+else {
+  URI_SCHEME = "http://";
+}
 
 Properties website_config_attribs = new Properties();
 website_config_attribs.load(new java.io.ByteArrayInputStream(__configurationValues[2].getBytes("UTF-8")));

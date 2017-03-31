@@ -345,7 +345,7 @@ helperBean.closeResources();
 product_catalogue.closeResources();
 %>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
 <script type="text/javascript">
 var addthis_config = {
   ui_use_css : false

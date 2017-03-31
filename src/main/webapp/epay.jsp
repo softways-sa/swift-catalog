@@ -82,7 +82,7 @@ nf.setMaximumFractionDigits(2);
   
 <div class="container">
 
-<form id="epayForm" name="epayForm" action="<%=HTTP_PROTOCOL + serverName + "/epay_checkout.jsp"%>" method="post" onsubmit="return confirmOrder();">
+<form id="epayForm" name="epayForm" action="<%=URI_SCHEME + serverName + "/epay_checkout.jsp"%>" method="post" onsubmit="return confirmOrder();">
 
   <div class="sectionHeader"><%=lb.get("htmlTitle" + lang)%></div>
 

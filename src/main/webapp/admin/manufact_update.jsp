@@ -15,10 +15,10 @@ String action = request.getParameter("action1") != null ? request.getParameter("
        goLabel = request.getParameter("goLabel") == null ? "" : request.getParameter("goLabel"), 
        manufactId = request.getParameter("manufactId") != null ? request.getParameter("manufactId") : "";
 
-String urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/manufact_search.jsp?action1=UPDATE_SEARCH&goLabel=results"),
-       urlFailure = response.encodeURL("http://" + serverName + "/" + appDir + "admin/problem.jsp"),
-       urlCancel = response.encodeURL("http://" + serverName + "/" + appDir + "admin/manufact_search.jsp?goLabel=results"),
-       urlSuccessInsAgain = response.encodeURL("http://" + serverName + "/" + appDir + "admin/manufact_update.jsp");
+String urlSuccess = "/" + appDir + "admin/manufact_search.jsp?action1=UPDATE_SEARCH&goLabel=results",
+       urlFailure = "/" + appDir + "admin/problem.jsp",
+       urlCancel = "/" + appDir + "admin/manufact_search.jsp?goLabel=results",
+       urlSuccessInsAgain = "/" + appDir + "admin/manufact_update.jsp";
 
 String manufactName = "", manufactNameLG = "";
 

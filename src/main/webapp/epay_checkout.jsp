@@ -137,7 +137,7 @@ session.setAttribute(databaseId + ".epayment", epayment);
   
   <div style="margin-top: 10px;">
     <a href="/epay.jsp"><button type="button" class="btn btn-primary btn-md" name="submitbtn" id="submitbtn"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;<%=lb.get("editbtn" + lang)%></button></a>
-    <a id="payLink" href="<%=HTTP_PROTOCOL + serverName + "/epay_checkout.do"%>"><button type="button" class="btn btn-primary btn-md" name="submitbtn" id="submitbtn"><%=lb.get("btn" + lang)%>&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></button></a>
+    <a id="payLink" href="<%=URI_SCHEME + serverName + "/epay_checkout.do"%>"><button type="button" class="btn btn-primary btn-md" name="submitbtn" id="submitbtn"><%=lb.get("btn" + lang)%>&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></button></a>
   </div>
 
 </div>

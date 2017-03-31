@@ -9,9 +9,9 @@
 <%@ include file="include/auth.jsp" %>
 
 <%
-String urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/groups.jsp?action1=UPDATE_SEARCH&goLabel=results"),
-       urlFailure = response.encodeURL("http://" + serverName + "/" + appDir + "admin/problem.jsp"),
-       urlReturnGroup = response.encodeURL("groups.jsp?goLabel=results");
+String urlSuccess = "/" + appDir + "admin/groups.jsp?action1=UPDATE_SEARCH&goLabel=results",
+       urlFailure = "/" + appDir + "admin/problem.jsp",
+       urlReturnGroup = "groups.jsp?goLabel=results";
 
 int rows = 0;
   

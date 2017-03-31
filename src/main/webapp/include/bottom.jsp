@@ -104,7 +104,7 @@ static {
           <%
           }
           else if ("<a>".equals(menuOption.getTag())) {%>
-            <li><%if (!"1".equals(menuOption.getParent()) && menuOption.getURL() == null) {%><a href="<%="http://" + serverName + "/site/page/" + SwissKnife.sefEncode(menuOption.getTitle()) + "?CMCCode=" + menuOption.getCode() + "&amp;extLang=" + lang%>"><%= menuOption.getTitle() %></a><%}%><%if (!"1".equals(menuOption.getParent()) && menuOption.getURL() != null) {%><a href="<% if (menuOption.getURL().startsWith("/")) out.print("http://" + serverName + menuOption.getURL().replace("&", "&amp;")); else out.print(menuOption.getURL().replace("&", "&amp;")); %>"><%= menuOption.getTitle() %></a><%}%></li>
+            <li><%if (!"1".equals(menuOption.getParent()) && menuOption.getURL() == null) {%><a href="<%="/site/page/" + SwissKnife.sefEncode(menuOption.getTitle()) + "?CMCCode=" + menuOption.getCode() + "&amp;extLang=" + lang%>"><%= menuOption.getTitle() %></a><%}%><%if (!"1".equals(menuOption.getParent()) && menuOption.getURL() != null) {%><a href="<% if (menuOption.getURL().startsWith("/")) out.print(menuOption.getURL().replace("&", "&amp;")); else out.print(menuOption.getURL().replace("&", "&amp;")); %>"><%= menuOption.getTitle() %></a><%}%></li>
           <%
           }
           else if ("</ul>".equals(menuOption.getTag())) {%>
@@ -156,7 +156,7 @@ static {
         <div class="copyright col-xs-12 col-sm-3 col-md-3">Copyright &copy; Loren Ipsum S.A.</div>
         <div class="copyright col-xs-12 col-sm-3 col-md-3"></div>
         <div class="copyright col-xs-12 col-sm-3 col-md-3"></div>
-        <div class="poweredby col-xs-12 col-sm-3 col-md-3">Powered by <a href="http://www.softways.gr">Softways</a></div>
+        <div class="poweredby col-xs-12 col-sm-3 col-md-3">Powered by <a href="https://www.softways.gr">Softways</a></div>
       </div>
     </div>
   </div><!-- /footer-bottom -->

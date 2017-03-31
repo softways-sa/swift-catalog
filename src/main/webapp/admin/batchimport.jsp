@@ -9,8 +9,8 @@
 <%
 request.setAttribute("admin.topmenu","products");
 
-String urlReturn = response.encodeURL("http://" + serverName + "/" + appDir + "admin/batchimport.jsp"),
-       urlBatchManager = response.encodeURL("/servlet/admin/CatalogProductBatchManager");
+String urlReturn = "http://" + serverName + "/" + appDir + "admin/batchimport.jsp",
+       urlBatchManager = "/servlet/admin/CatalogProductBatchManager";
        
 String status = request.getParameter("status") == null ? "" : request.getParameter("status"),
        textMsg = request.getParameter("textMsg") == null ? "" : request.getParameter("textMsg");

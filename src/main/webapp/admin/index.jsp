@@ -35,16 +35,16 @@
               <td class="inputFrmLabelTDheader"><b>Περιεχόμενο</b></td>
             </tr>
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("processcmrow.jsp")%>" class="indexLink">Νέα σελίδα</a></td>
+              <td><a href="/admin/processcmrow.jsp" class="indexLink">Νέα σελίδα</a></td>
             </tr>	
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("cmrow.jsp?action1=SEARCH")%>" class="indexLink">Τροποποίηση σελίδας</a></td>
+              <td><a href="/admin/cmrow.jsp?action1=SEARCH" class="indexLink">Τροποποίηση σελίδας</a></td>
             </tr>
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("cmrow.jsp?CMCCode=0101&action1=SEARCH")%>" class="indexLink">Αρχική σελίδα</a></td>
+              <td><a href="/admin/cmrow.jsp?CMCCode=0101&action1=SEARCH" class="indexLink">Αρχική σελίδα</a></td>
             </tr>
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("cmrow.jsp?CMCCode=1006&action1=SEARCH")%>" class="indexLink">Στοιχεία επικοινωνίας</a></td>
+              <td><a href="/admin/cmrow.jsp?CMCCode=1006&action1=SEARCH" class="indexLink">Στοιχεία επικοινωνίας</a></td>
             </tr>
             </table>
           </td>
@@ -55,10 +55,10 @@
               <td class="inputFrmLabelTDheader"><b>Παραμετροποίηση</b></td>
             </tr>
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("uploadfiles.jsp")%>" class="indexLink">Ανέβασμα αρχείων / εικόνων</a></td>
+              <td><a href="/admin/uploadfiles.jsp" class="indexLink">Ανέβασμα αρχείων / εικόνων</a></td>
             </tr>
             <tr>
-              <td><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("configuration_update.jsp?action1=EDIT&CO_Code=005")%>" class="indexLink">Email παραλήπτη φόρμας επικοινωνίας</a></td>
+              <td><a href="/admin/configuration_update.jsp?action1=EDIT&CO_Code=005" class="indexLink">Email παραλήπτη φόρμας επικοινωνίας</a></td>
             </tr>
             </table>
           </td>
@@ -73,10 +73,10 @@
                 <td class="inputFrmLabelTDheader"><b>Προϊόντα</b></td>
               </tr>
               <tr>
-                <td class="resultsDataTD"><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("product_update.jsp")%>" class="indexLink">Νέο προϊόν</a></td>
+                <td class="resultsDataTD"><a href="/admin/product_update.jsp" class="indexLink">Νέο προϊόν</a></td>
               </tr>	
               <tr>
-                <td class="resultsDataTD"><a href="<%="http://" + serverName + "/admin/" + response.encodeURL("product_search.jsp?action1=SEARCH")%>" class="indexLink">Μεταβολή στοιχείων προϊόντος</a></td>
+                <td class="resultsDataTD"><a href="/admin/product_search.jsp?action1=SEARCH" class="indexLink">Μεταβολή στοιχείων προϊόντος</a></td>
               </tr>
               </table>
             </td>

@@ -11,7 +11,7 @@
 <jsp:useBean id="payments_search" scope="session" class="gr.softways.dev.epayment.Search" />
 
 <%
-if (!"1".equals(website_config_epay)) {response.sendRedirect("http://" + serverName + "/admin/" + response.encodeURL("noaccess.jsp")); return;}
+if (!"1".equals(website_config_epay)) {response.sendRedirect("/admin/noaccess.jsp"); return;}
 
 payments_search.initBean(databaseId, request, response, this, session);
 
@@ -44,12 +44,12 @@ String PAYNT_Code = payments_search.getPAYNT_Code(),
 String sorted_by_col = payments_search.getSortedByCol(),
        sorted_by_order = payments_search.getSortedByOrder();
 
-String urlSearch = response.encodeURL("epayments_search.jsp"),
+String urlSearch = "epayments_search.jsp",
        urlQuerySearch = "epayments_search.jsp?PAYNT_Code=" + SwissKnife.hexEscape(PAYNT_Code),
-       urlNew = response.encodeURL("epayments_update.jsp"),
+       urlNew = "epayments_update.jsp",
        action = request.getParameter("action1") == null ? "" : request.getParameter("action1"),
-       urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/epayments_search.jsp?action1=UPDATE_SEARCH&goLabel=results"),
-       urlFailure = response.encodeURL("http://" + serverName + "/" + appDir + "admin/problem.jsp");
+       urlSuccess = "/" + appDir + "admin/epayments_search.jsp?action1=UPDATE_SEARCH&goLabel=results",
+       urlFailure = "/" + appDir + "admin/problem.jsp";
 
 String goLabel = request.getParameter("goLabel") == null ? "" : request.getParameter("goLabel");
 

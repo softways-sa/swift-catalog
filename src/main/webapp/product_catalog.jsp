@@ -114,8 +114,8 @@ while (product_catalogue.inBounds() == true) { %>
         cat_img = "/images/prd_cat_not_avail.png";
     }
 
-    if (product_catalogue.getColumn("catParentFlag").equals("1")) cat_url = "http://" + serverName + "/site/category/" + sef_url + SwissKnife.sefEncode(product_catalogue.getColumn("catName" + lang)) + "?catId=" + product_catalogue.getColumn("catId") + "&amp;extLang" + lang;
-    else cat_url = "http://" + serverName + "/site/search/" + sef_url + SwissKnife.sefEncode(product_catalogue.getColumn("catName" + lang)) + "?catId=" + product_catalogue.getColumn("catId") + "&amp;extLang=" + lang;
+    if (product_catalogue.getColumn("catParentFlag").equals("1")) cat_url = "/site/category/" + sef_url + SwissKnife.sefEncode(product_catalogue.getColumn("catName" + lang)) + "?catId=" + product_catalogue.getColumn("catId") + "&amp;extLang" + lang;
+    else cat_url = "/site/search/" + sef_url + SwissKnife.sefEncode(product_catalogue.getColumn("catName" + lang)) + "?catId=" + product_catalogue.getColumn("catId") + "&amp;extLang=" + lang;
 %>
     <div class="catcell" onclick="document.location.href='<%=cat_url%>'">
       <div class="prdcat_img_link"><a href="<%=cat_url%>"><img src="<%=cat_img%>" alt="<%=product_catalogue.getColumn("catName" + lang).replace("\"", "&quot;")%>" title="<%=product_catalogue.getColumn("catName" + lang).replace("\"", "&quot;")%>" /></a></div>

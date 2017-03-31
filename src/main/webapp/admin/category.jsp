@@ -11,7 +11,7 @@
 <jsp:useBean id="app_searchcateg" scope="session" class="gr.softways.dev.eshop.category.v2.Search" />
 
 <%
-if (!"1".equals(website_config_catalog)) {response.sendRedirect("http://" + serverName + "/admin/" + response.encodeURL("noaccess.jsp")); return;}
+if (!"1".equals(website_config_catalog)) {response.sendRedirect("/admin/noaccess.jsp"); return;}
 
 request.setAttribute("admin.topmenu","products");
 

@@ -68,8 +68,8 @@ if (whereAmI.equals("/index.jsp") && top_CMCCode.equals("")) top_CMCCode = HOME_
 
   <div id="search-lang-top" class="clearfix">
     <div><form id="langForm" method="post" action="#"><input type="hidden" name="lang" value="" /></form></div>
-    <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang="%>">ΕΛΛΗΝΙΚΑ</a></noscript></div>
-    <div><noscript><a href="<%="http://" + serverName + "/" + "index.jsp?extLang=LG"%>">ENGLISH</a></noscript></div>
+    <div><noscript><a href="<%="/index.jsp?extLang="%>">ΕΛΛΗΝΙΚΑ</a></noscript></div>
+    <div><noscript><a href="<%="/index.jsp?extLang=LG"%>">ENGLISH</a></noscript></div>
 
     <div id="header-flags" class="clearfix">
     <div class="pull-right">

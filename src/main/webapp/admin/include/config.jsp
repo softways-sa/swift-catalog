@@ -35,8 +35,8 @@ String bodyString = "bgcolor=\"#ffffff\" leftMargin=0 topMargin=0 marginheight=\
 
 int dispRows = 10;
 
-String urlLoginFirst = "http://" + serverName + "/admin/" + response.encodeURL("login.jsp"),
-       urlNoAccess = "http://" + serverName + "/admin/" + response.encodeURL("noaccess.jsp");
+String urlLoginFirst = "/admin/" + response.encodeURL("login.jsp"),
+       urlNoAccess = "/admin/" + response.encodeURL("noaccess.jsp");
 
 /** FileTemplate σταθερές { */
 String TEMPLATE_OP_INNew = "INNew";

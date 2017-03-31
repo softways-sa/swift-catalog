@@ -61,8 +61,8 @@ else checkout_lang = "en";
 
 String orderDesc = "e-payments";
 
-String confirmUrl = HTTP_PROTOCOL + serverName + "/epay_cardlink_confirm.do",
-    cancelUrl = HTTP_PROTOCOL + serverName + "/epay_cardlink_confirm.do";
+String confirmUrl = URI_SCHEME + serverName + "/epay_cardlink_confirm.do",
+    cancelUrl = URI_SCHEME + serverName + "/epay_cardlink_confirm.do";
       
 String data = proxypayMerchantID + checkout_lang + PAYNT_Code + orderDesc +
     PAYNT_Amount.setScale(2, BigDecimal.ROUND_HALF_UP) + "EUR" +

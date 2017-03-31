@@ -9,14 +9,14 @@
 <jsp:useBean id="helperBean" scope="page" class="gr.softways.dev.util.JSPBean" />
 
 <%
-if (!"1".equals(website_config_newsletter)) {response.sendRedirect("http://" + serverName + "/admin/" + response.encodeURL("noaccess.jsp")); return;}
+if (!"1".equals(website_config_newsletter)) {response.sendRedirect("/admin/noaccess.jsp"); return;}
 
 request.setAttribute("admin.topmenu","newsletter");
 
 helperBean.initBean(databaseId, request, response, this, session);
    
-String urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/sendemail.jsp"),
-       urlFailure = "http://" + serverName + "/" + appDir + "admin/sendemail.jsp";
+String urlSuccess = "/" + appDir + "admin/sendemail.jsp",
+       urlFailure = "/" + appDir + "admin/sendemail.jsp";
 
 String body = "", from = "", subject = "", mailContent = "", mailCharset = "", NWLR_Title = "";
 
@@ -40,8 +40,8 @@ if (NWLR_Code != null && NWLR_Code.length() > 0) {
 
     <title>eΔιαχείριση</title>
     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.form.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
     
     <script language="JavaScript" src="js/jsfunctions.js"></script>
     

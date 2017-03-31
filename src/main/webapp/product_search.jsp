@@ -207,7 +207,7 @@ if (totalRowCount > 0) {
   String prd_img = "", viewPrdPageURL = "";
 %>
   <div class="searchSort" style="float:right;">
-  <form id="searchSortForm" action="<%="http://" + serverName + "/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "")%>" method="get">
+  <form id="searchSortForm" action="<%="/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "")%>" method="get">
     <input name="qid" value="<%=product_search.getQID()%>" type="hidden">
     <input name="catId" value="<%=product_search.getCatId()%>" type="hidden">
     <input name="spof" value="<%=product_search.getHotdealFlag()%>" type="hidden">
@@ -232,7 +232,7 @@ if (totalRowCount > 0) {
   <div id="productSearchListSection">
 <%
   while (product_search.inBounds() == true) {
-    viewPrdPageURL = "http://" + serverName + "/site/product/" + SwissKnife.sefEncode(product_search.getColumn("catName" + lang)) + "/" + SwissKnife.sefEncode(product_search.getColumn("name" + lang)) + "?prdId=" + product_search.getHexColumn("prdId") + "&amp;extLang=" + lang;
+    viewPrdPageURL = "/site/product/" + SwissKnife.sefEncode(product_search.getColumn("catName" + lang)) + "/" + SwissKnife.sefEncode(product_search.getColumn("name" + lang)) + "?prdId=" + product_search.getHexColumn("prdId") + "&amp;extLang=" + lang;
 
     prdPrice = null;
 
@@ -286,7 +286,7 @@ if (totalRowCount > 0) {
   
   <br style="clear:both;" />
   <div class="searchSort hidden-xs" style="float:right;">
-  <form id="searchSortFormBtm" action="<%="http://" + serverName + "/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "")%>" method="get">
+  <form id="searchSortFormBtm" action="<%="/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "")%>" method="get">
     <input name="qid" value="<%=product_search.getQID()%>" type="hidden">
     <input name="catId" value="<%=product_search.getCatId()%>" type="hidden">
     <input name="spof" value="<%=product_search.getHotdealFlag()%>" type="hidden">
@@ -309,7 +309,7 @@ if (totalRowCount > 0) {
   </div><br style="clear:both;" />
 <%
     if (totalPages > 1) {
-        String urlQuerySearch = "http://" + serverName + "/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "") + "?catId=" + SwissKnife.hexEscape(product_search.getCatId()) + "&amp;qid=" + SwissKnife.hexEscape(product_search.getQID()) + "&amp;spof=" + SwissKnife.hexEscape(product_search.getHotdealFlag()) + "&amp;newarr=" + SwissKnife.hexEscape(product_search.getPrdCompFlag()) + "&amp;fprd=" + SwissKnife.hexEscape(product_search.getPrdNewColl()) + "&amp;sort=" + SwissKnife.hexEscape(sort) + "&amp;pperpage=" + SwissKnife.hexEscape(pperpage) + "&amp;extLang=" + lang;
+        String urlQuerySearch = "/site/search" + (sef_url.length() > 0 ? "/" + sef_url.substring(0,sef_url.length()-1) : "") + "?catId=" + SwissKnife.hexEscape(product_search.getCatId()) + "&amp;qid=" + SwissKnife.hexEscape(product_search.getQID()) + "&amp;spof=" + SwissKnife.hexEscape(product_search.getHotdealFlag()) + "&amp;newarr=" + SwissKnife.hexEscape(product_search.getPrdCompFlag()) + "&amp;fprd=" + SwissKnife.hexEscape(product_search.getPrdNewColl()) + "&amp;sort=" + SwissKnife.hexEscape(sort) + "&amp;pperpage=" + SwissKnife.hexEscape(pperpage) + "&amp;extLang=" + lang;
     %>
         <div id="searchPagination" class="clearfix">
 

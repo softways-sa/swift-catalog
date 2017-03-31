@@ -52,8 +52,8 @@
 
 					<%
 					if ("<a>".equals(menuOption.getTag())) {
-						if ("1".equals(menuOption.getParent())) top_MenuURL = "http://" + serverName + "/site/category/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
-						else top_MenuURL = "http://" + serverName + "/site/search/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
+						if ("1".equals(menuOption.getParent())) top_MenuURL = "/site/category/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
+						else top_MenuURL = "/site/search/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
 						
 						li_level++;
 					%>
@@ -92,7 +92,7 @@
 
 					<%
 					if ("<a>".equals(menuOption.getTag()) && !"1".equals(menuOption.getParent())) {
-						top_MenuURL = "http://" + serverName + "/site/search/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
+						top_MenuURL = "/site/search/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
 					%>
 						<li><a href="<%=top_MenuURL%>"><%=menuOption.getTitle()%></a><!-- Simple Link -->
 					<%
@@ -101,7 +101,7 @@
 
 					<%
 					if ("<a>".equals(menuOption.getTag()) && "1".equals(menuOption.getParent())) {
-						top_MenuURL = "http://" + serverName + "/site/category/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
+						top_MenuURL = "/site/category/" + menuOption.getSefFullPath() + "?catId=" + menuOption.getCode() + "&amp;extLang=" + lang;
 					%>
 						<li class="dropdown_parent"><a href="<%=top_MenuURL%>"><%=menuOption.getTitle()%></a><ul class="dropdown_flyout_level">
 					<%}%>
@@ -147,7 +147,7 @@
 			
 			<%
 			if ("<a>".equals(menuOption.getTag()) && menuOption.getCode().length() >= 4 && !"1".equals(menuOption.getParent())) {
-				if (menuOption.getURL() == null) top_MenuURL = "http://" + serverName + "/site/page/" + SwissKnife.sefEncode(menuOption.getTitle()) + "?CMCCode=" + menuOption.getCode() + "&amp;extLang=" + lang;
+				if (menuOption.getURL() == null) top_MenuURL = "/site/page/" + SwissKnife.sefEncode(menuOption.getTitle()) + "?CMCCode=" + menuOption.getCode() + "&amp;extLang=" + lang;
 				else top_MenuURL = menuOption.getURL();
 			%>
 				<li><a href="<%=top_MenuURL%>"><%=menuOption.getTitle()%></a><!-- Simple Link -->

@@ -70,12 +70,11 @@ String searchCMRDateCreatedDay = sw_relCMRow.getSearchCMRDateCreatedDay(),
    searchCMRTitle = sw_relCMRow.getSearchCMRTitle(),
    searchCMCCode = sw_relCMRow.getSearchCMCCode();
 
-
-String urlSearch = response.encodeURL("relatecmrow.jsp"),
-       urlReturn = response.encodeURL("http://" + serverName + "/" + appDir + "admin/processcmrow.jsp?action1=EDIT&goLabel=relCMRow&CMRCode=" + CMCM_CMRCode1),
-       urlRelCMRow = response.encodeURL("/servlet/admin/RelateCMRow"),
-       urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/relatecmrow.jsp?action1=UPDATE_SEARCH&goLabel=results"),
-       urlFailure = response.encodeURL("http://" + serverName + "/" + appDir + "admin/problem.jsp"),
+String urlSearch = "relatecmrow.jsp",
+       urlReturn = "/" + appDir + "admin/processcmrow.jsp?action1=EDIT&goLabel=relCMRow&CMRCode=" + CMCM_CMRCode1,
+       urlRelCMRow = "/servlet/admin/RelateCMRow",
+       urlSuccess = "/" + appDir + "admin/relatecmrow.jsp?action1=UPDATE_SEARCH&goLabel=results",
+       urlFailure = "/" + appDir + "admin/problem.jsp",
        action = request.getParameter("action1") == null ? "" : request.getParameter("action1"),
        urlQuerySearch = "relatecmrow.jsp?searchCMRTitle=" + SwissKnife.hexEscape(searchCMRTitle)
                         + "&searchCMRDateCreatedDay=" + SwissKnife.hexEscape(searchCMRDateCreatedDay)        
@@ -85,7 +84,7 @@ String urlSearch = response.encodeURL("relatecmrow.jsp"),
                         + "&searchCMRDateUpdatedMonth=" + SwissKnife.hexEscape(searchCMRDateUpdatedMonth)        
                         + "&searchCMRDateUpdatedYear=" + SwissKnife.hexEscape(searchCMRDateUpdatedYear)
                         + "&sorted_by_col=" + SwissKnife.hexEscape(sorted_by_col)
-                        + "&sorted_by_order=" + SwissKnife.hexEscape(sorted_by_order),        
+                        + "&sorted_by_order=" + SwissKnife.hexEscape(sorted_by_order),
        goLabel = request.getParameter("goLabel") == null ? "" : request.getParameter("goLabel");
 int rows = 0;
 

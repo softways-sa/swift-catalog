@@ -18,11 +18,11 @@ request.setAttribute("admin.topmenu","admin");
 String action = request.getParameter("action1") != null ? request.getParameter("action1") : "",
        ausrCode = request.getParameter("ausrCode") != null ? request.getParameter("ausrCode") : "";
 
-String  urlCancel = "http://" + serverName + "/admin/" + response.encodeURL("adminusers.jsp?goLabel=results"),
-        urlSuccessInsAgain = "http://" + serverName + "/admin/" +  response.encodeURL("processadminusers.jsp"),
-        urlSuccess = response.encodeURL("http://" + serverName + "/" + appDir + "admin/adminusers.jsp?action1=UPDATE_SEARCH&goLabel=results"),
-        urlFailure = response.encodeURL("http://" + serverName + "/" + appDir + "admin/problem.jsp"),
-        urlReturn = response.encodeURL("http://" + serverName + "/" + appDir + "admin/adminusers.jsp?goLabel=results" );
+String  urlCancel = "/admin/adminusers.jsp?goLabel=results",
+        urlSuccessInsAgain = "/admin/processadminusers.jsp",
+        urlSuccess = "/" + appDir + "admin/adminusers.jsp?action1=UPDATE_SEARCH&goLabel=results",
+        urlFailure = "/" + appDir + "admin/problem.jsp",
+        urlReturn = "/" + appDir + "admin/adminusers.jsp?goLabel=results";
         
 String ausrLastname = "", ausrFirstname = "",
        ausrUsername = "", ausrUserGroupId = "",

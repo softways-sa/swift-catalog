@@ -32,7 +32,7 @@ if (totalPages > 1) { %>
                 if (i == currentPage) { %>
                     <span class="pageIndexLink"><%= i %></span>
             <%  } else { %>
-                    <a class="pageIndexLink2" href="<%= "http://" + serverName + "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + ((i-1)*dispRows)) %>"><%= i %></a>
+                    <a class="pageIndexLink2" href="<%= "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + ((i-1)*dispRows)) %>"><%= i %></a>
             <%  }
             }
             %>
@@ -41,7 +41,7 @@ if (totalPages > 1) { %>
             <img src="images/dot_blank.gif" width="15" height="1" alt="" />
             <%
             if (currentPage > 1) { %>
-                <a class="pageIndexLink2" href="<%= "http://" + serverName + "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + ((currentPage-2)*dispRows)) %>">&#139; προηγούμενη</a>
+                <a class="pageIndexLink2" href="<%= "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + ((currentPage-2)*dispRows)) %>">&#139; προηγούμενη</a>
             <%
             }
             
@@ -51,7 +51,7 @@ if (totalPages > 1) { %>
             }
             
             if (currentPage < totalPages) { %>
-                <a class="pageIndexLink2" href="<%= "http://" + serverName + "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + (currentPage*dispRows)) %>">επόμενη &#155;</a>
+                <a class="pageIndexLink2" href="<%= "/admin/" + response.encodeURL(urlQuerySearch + "&action1=SEARCH&start=" + (currentPage*dispRows)) %>">επόμενη &#155;</a>
             <%
             } %>
         </td>

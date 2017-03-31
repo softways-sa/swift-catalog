@@ -92,7 +92,7 @@ int startPage = 0, endPage = 0;
 
 int start = searchArticle.getStart();
 
-String urlQuerySearch = "http://" + serverName + "/site/page" + "?CMCCode=" + SwissKnife.hexEscape(searchArticle.getCMCCode()) + "&amp;extLang=" + lang;
+String urlQuerySearch = "/site/page" + "?CMCCode=" + SwissKnife.hexEscape(searchArticle.getCMCCode()) + "&amp;extLang=" + lang;
 
 StringBuilder htmlText = null, CMRHeadHTML = null, CMRBodyHTML = null;
 
@@ -156,7 +156,7 @@ if (!CMCCode.equals("") && !CMCCode.trim().startsWith("01")) {
                 if ((i+1)<CMCTree.length) top_jsp_path += "&nbsp;|&nbsp;";
 
                 CMCURL = CMCTree[i][2];
-                if (CMCURL.equals("")) CMCURL = "http://" + serverName + "/" + "index.jsp?CMCCode=" + CMCTree[i][1] + "&amp;extLang=" + lang;
+                if (CMCURL.equals("")) CMCURL = "/index.jsp?CMCCode=" + CMCTree[i][1] + "&amp;extLang=" + lang;
             }
         }
     }
@@ -230,11 +230,11 @@ else if (totalRowCount > 1) {
       boolean postHasLink = searchArticle.getColumn("CMRText" + lang).length() > 0 ? true : false;
       %>
         <div class="clearfix post">
-          <h5 class="entry-title"><%if (postHasLink == true) {%><a href="<%="http://" + serverName + "/site/page/" + SwissKnife.sefEncode(searchArticle.getColumn("CMRTitle" + lang)) + "?CMRCode=" + searchArticle.getColumn("CMRCode") + "&amp;extLang=" + lang%>"><%}%><%=searchArticle.getColumn("CMRTitle" + lang)%><%if (postHasLink == true) {%></a><%}%></h5>
+          <h5 class="entry-title"><%if (postHasLink == true) {%><a href="<%="/site/page/" + SwissKnife.sefEncode(searchArticle.getColumn("CMRTitle" + lang)) + "?CMRCode=" + searchArticle.getColumn("CMRCode") + "&amp;extLang=" + lang%>"><%}%><%=searchArticle.getColumn("CMRTitle" + lang)%><%if (postHasLink == true) {%></a><%}%></h5>
           <%if (searchArticle.getColumn("CMRSummary" + lang).length()>0) {%><div class="post-content"><%=searchArticle.getColumn("CMRSummary" + lang)%></div><%}%>
           <div class="meta-info">
             <%=lb.get("pub" + lang)%> <%=SwissKnife.formatDate(searchArticle.getTimestamp("CMRDateCreated"),"dd/MM/yyyy")%> 
-            <%if (postHasLink == true) {%><div class="right"><a class="read-more" href="<%="http://" + serverName + "/site/page/" + SwissKnife.sefEncode(searchArticle.getColumn("CMRTitle" + lang)) + "?CMRCode=" + searchArticle.getColumn("CMRCode") + "&amp;extLang=" + lang%>"><%=lb.get("more" + lang)%> &rsaquo;</a></div><%}%>
+            <%if (postHasLink == true) {%><div class="right"><a class="read-more" href="<%="/site/page/" + SwissKnife.sefEncode(searchArticle.getColumn("CMRTitle" + lang)) + "?CMRCode=" + searchArticle.getColumn("CMRCode") + "&amp;extLang=" + lang%>"><%=lb.get("more" + lang)%> &rsaquo;</a></div><%}%>
           </div>
         </div>
 <%
